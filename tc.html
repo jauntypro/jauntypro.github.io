@@ -25,6 +25,7 @@
       <th scope="col">TC</th>
       <th scope="col">AD</th>
       <th scope="col">SOYAD</th>
+      <th scope="col">DOĞUM TARİHİ</th>
       <th scope="col">NÜFUS İL</th>
       <th scope="col">NÜFUS İLÇE</th>
       <th scope="col">ANNE AD / TC</th>
@@ -33,15 +34,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr id="data1">
     </tr>
   </tbody>
 </table>
@@ -56,15 +49,14 @@
       
       function sorgula() {
           if (document.getElementById("tcNo").value.length < 11 || document.getElementById("tcNo").value.length > 11) return alert("tc girişin hatalı yarrak");
-          /*
           fetch('https://api.github.com/users/KrunalLathiya')
   .then(response => response.json())
   .then(data => {
-       let gelenData = data;
+       document.getElementById("data1").innerHTML = `<td>${data[0]["TC"]}</td><td>${data[0]["ADI"]}</td><td>${data[0]["SOYADI"]}</td><td>${data[0]["DOGUMTARIHI"]}</td><td>${data[0]["NUFUSIL"]}</td><td>${data[0]["NUFUSILCE"]}</td><td>${data[0]["ANNEADI"] + " / " + data[0]["ANNETC"]}</td><td>${data[0]["BABAADI"] + " / " + data[0]["BABATC"]}</td><td>${data[0]["UYRUK"]}</td>`;
+      document.getElementById("sonuclar").style.display = "block";
   })
   .catch(error => console.error(error)) 
-  */
-        document.getElementById("sonuclar").style.display = "block";
+        
       }
   </script>
 </body></html>

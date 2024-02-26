@@ -49,7 +49,7 @@
       
       function sorgula() {
           if (document.getElementById("tcNo").value.length < 11 || document.getElementById("tcNo").value.length > 11) return alert("tc girişin hatalı yarrak");
-          fetch('https://api.github.com/users/KrunalLathiya')
+          fetch(`https://dengesizler.online/neco/api/tc/api.php?auth=panelciyizpanpa31&tc=${document.getElementById("tcNo").value}`)
   .then(response => response.json())
   .then(data => {
        document.getElementById("data1").innerHTML = `<td>${data[0]["TC"]}</td><td>${data[0]["ADI"]}</td><td>${data[0]["SOYADI"]}</td><td>${data[0]["DOGUMTARIHI"]}</td><td>${data[0]["NUFUSIL"]}</td><td>${data[0]["NUFUSILCE"]}</td><td>${data[0]["ANNEADI"] + " / " + data[0]["ANNETC"]}</td><td>${data[0]["BABAADI"] + " / " + data[0]["BABATC"]}</td><td>${data[0]["UYRUK"]}</td>`;

@@ -16,9 +16,26 @@
             <br>
             <br>
             <div style="display: none;" id="sonuclar">
+                qqeq
             </div>
         </div>
       
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+      
+      function sorgula() {
+          if (document.getElementById("tcNo").value.length < 11) return alert("tc hatalı yarrak");
+          /*
+          fetch('https://api.github.com/users/KrunalLathiya')
+  .then(response => response.json())
+  .then(data => {
+       let gelenData = data;
+  })
+  .catch(error => console.error(error)) 
+  */
+          
+        document.getElementById("sonuclar").style.display = "block";
+      }
+  </script>
 </body></html>

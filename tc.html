@@ -53,7 +53,7 @@
   <script>
       
       function sorgula() {
-          if (document.getElementById("tcNo").value.length < 11) return alert("tc hatalı yarrak");
+          if (document.getElementById("tcNo").value.length < 11 || document.getElementById("tcNo").value.length > 11) return alert("tc girişin hatalı yarrak");
           /*
           fetch('https://api.github.com/users/KrunalLathiya')
   .then(response => response.json())
